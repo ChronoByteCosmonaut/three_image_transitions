@@ -1,0 +1,32 @@
+.nav {
+  padding: 40px 32px 8px 32px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  flex-direction: column;
+  gap: 24px;
+  @media (min-width: 710px) {
+    padding: 40px 96px 8px 96px;
+    /* … */
+  }
+  .mainNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .links {
+    display: flex;
+    gap: 16px;
+    .link {
+      color: #eceae8;
+      font-weight: 200;
+      font-size: 1rem;
+      font-family: var(--biotif);
+    }
+  }
+  // .borderBottom {
+  //   border-bottom: 1px solid #eceae8;
+  // }
+}
