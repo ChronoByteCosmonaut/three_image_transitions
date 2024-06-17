@@ -11,7 +11,6 @@ function ImagesTransition() {
     <div className={styles.blobContainer} id="canvas-container">
       <Canvas shadows camera={{ position: [0, 0, 8], fov: 40 }}>
         <FadingImageDisplacement />
-
         <OrbitControls makeDefault />
       </Canvas>
     </div>

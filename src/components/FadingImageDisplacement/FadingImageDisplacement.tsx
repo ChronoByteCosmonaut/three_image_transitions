@@ -8,8 +8,11 @@ export const ImageFadeMaterial = shaderMaterial(
   {
     effectFactor: 1.2,
     dispFactor: 0,
+    // @ts-ignore
     tex: undefined,
+    // @ts-ignore
     tex2: undefined,
+    // @ts-ignore
     disp: undefined,
   },
   /*glsl */ ` varying vec2 vUv;
@@ -60,7 +63,9 @@ function FadingImageDisplacement() {
   const [hoveredT, setHoveredT] = useState(false);
 
   useFrame(() => {
+    //@ts-ignore
     ref2.current.dispFactor = THREE.MathUtils.lerp(
+      //@ts-ignore
       ref2.current.dispFactor,
       hoveredT ? 1 : 0,
       0.075
@@ -68,7 +73,9 @@ function FadingImageDisplacement() {
   });
 
   useFrame(() => {
+    //@ts-ignore
     ref.current.dispFactor = THREE.MathUtils.lerp(
+      //@ts-ignore
       ref.current.dispFactor,
       hovered ? 1 : 0,
       0.075
@@ -99,6 +106,7 @@ function FadingImageDisplacement() {
         onPointerOver={(e) => setHoveredT(true)}
         onPointerOut={(e) => setHoveredT(false)}
       >
+        {/* @ts-ignore */}
         <roundedPlaneGeometry args={[2.25, 4]} />
         {/* @ts-ignore */}
         <imageFadeMaterial
