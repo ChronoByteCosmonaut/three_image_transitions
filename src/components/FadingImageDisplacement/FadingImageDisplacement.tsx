@@ -3,7 +3,6 @@ import { extend, useFrame } from "@react-three/fiber";
 import React, { useRef, useState } from "react";
 import * as THREE from "three";
 import { geometry } from "maath";
-import { RoundedPlaneGeometry } from "maath/dist/declarations/src/geometry";
 export const ImageFadeMaterial = shaderMaterial(
   {
     effectFactor: 1.2,
